@@ -9,7 +9,7 @@ ${PASSWORD}  SuperSecretPassword!
 
 *** Test Cases ***
 Login Success
-    Open Browser    ${URL}    ${BROWSER}    headless=True
+    Open Browser    ${URL}    Chrome    headless=True
     Input Text    id=username    ${USERNAME}
     Input Text    id=password    ${PASSWORD}
     Click Button  css=button[type="submit"]
