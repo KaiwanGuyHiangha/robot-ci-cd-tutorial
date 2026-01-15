@@ -23,10 +23,14 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    - name: Install Chromium and driver
+    - name: Install Chromium
       run: |
         sudo apt-get update
         sudo apt-get install -y chromium-browser chromium-chromedriver
+
+    - name: Set Chromium as Chrome
+      run: |
+        sudo ln -s /usr/bin/chromium-browser /usr/bin/google-chrome || true
 
     - name: Run Robot Tests
       run: |
