@@ -19,12 +19,10 @@ Login Success
 *** Keywords ***
 Setup Browser
     ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-
     Call Method    ${options}    add_argument    --headless
     Call Method    ${options}    add_argument    --no-sandbox
     Call Method    ${options}    add_argument    --disable-dev-shm-usage
 
     ${driver_path}=    Evaluate    __import__('webdriver_manager.chrome').chrome.ChromeDriverManager().install()
-    ${service}=    Evaluate    sys.modules['selenium.webdriver.chrome.service'].Service(${driver_path})    selenium.webdriver
 
-    Create Webdriver    Chrome    service=${service}    options=${options}
+    Create Webdriver    Chrome    options=${options}    executable_path=${driver_path}
