@@ -3,7 +3,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${URL}       https://the-internet.herokuapp.com/login
-${BROWSER}   Chrome
+${BROWSER}   Chromium
 ${USERNAME}  tomsmith
 ${PASSWORD}  SuperSecretPassword!
 
