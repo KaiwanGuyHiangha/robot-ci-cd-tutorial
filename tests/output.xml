@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2026-01-16T10:25:53.770071" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\kaiwanhi\robot-ci-cd-tutorial\tests\login.robot">
+<test id="s1-t1" name="Login Success" line="11">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-16T10:25:54.691752" level="INFO">Opening browser 'Firefox' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<msg time="2026-01-16T10:26:28.770869" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-01-16T10:26:28.770869" level="FAIL">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>headless=True</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="FAIL" start="2026-01-16T10:25:54.691752" elapsed="34.119319">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-16T10:26:28.811071" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-16T10:26:28.811071" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>css=button[type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-16T10:26:28.812071" elapsed="0.000000"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<arg>You logged into a secure area!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="NOT RUN" start="2026-01-16T10:26:28.812071" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-01-16T10:26:28.812071" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-01-16T10:25:54.691752" elapsed="34.120319">NoSuchDriverException: Message: Unable to obtain driver for firefox; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors/driver_location
+</status>
+</test>
+<status status="FAIL" start="2026-01-16T10:25:53.781357" elapsed="35.031715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

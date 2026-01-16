@@ -3,7 +3,7 @@ Library    SeleniumLibrary    timeout=10
 
 *** Variables ***
 ${URL}       https://the-internet.herokuapp.com/login
-${BROWSER}   Chrome
+${BROWSER}   Edge
 ${USERNAME}  tomsmith
 ${PASSWORD}  SuperSecretPassword!
 
